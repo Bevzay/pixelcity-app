@@ -12,6 +12,17 @@ import CoreLocation // manage location
 
 class MapVC: UIViewController, UIGestureRecognizerDelegate {
 
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let pinAnnotation = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "droppablePin")
+        pinAnnotation.pinTintColor = #colorLiteral(red: 0.9771530032, green: 0.7062081099, blue: 0.1748393774, alpha: 1)
+        pinAnnotation.animatesDrop = true
+        return pinAnnotation
+    }
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager = CLLocationManager()
@@ -26,6 +37,8 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         addDoubleTap()
     }
     
+    //---
+    
     func addDoubleTap() {
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
         doubleTap.numberOfTapsRequired = 2
@@ -33,6 +46,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.addGestureRecognizer(doubleTap)
     }
 
+    //---
     
     @IBAction func centerMapButtonWasPressed(_ sender: Any) {
         if authorisationSatus == .authorizedAlways || authorisationSatus == .authorizedWhenInUse {
@@ -41,6 +55,8 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
 }
+
+//----------------
 
 extension MapVC: MKMapViewDelegate {
     func centerMapOnUserLocation() {
@@ -68,6 +84,8 @@ extension MapVC: MKMapViewDelegate {
         }
     }
 }
+
+//----------------
 
 extension MapVC: CLLocationManagerDelegate {
     func configureLocationServices() {
