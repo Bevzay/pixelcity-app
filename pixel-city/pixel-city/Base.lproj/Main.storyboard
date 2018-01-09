@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
@@ -90,7 +93,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="141"/>
+            <point key="canvasLocation" x="215" y="-30"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="s4g-cV-xqF">
+            <objects>
+                <viewController id="d6X-Ho-qKu" customClass="PopVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sBz-hC-aHe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pAE-eK-Bdx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6W-1Y-bFu">
+                                <rect key="frame" x="87" y="622" width="200" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-jC-Tsh">
+                                        <rect key="frame" x="9" y="0.0" width="182.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="L0b-dP-2fA"/>
+                                    <constraint firstItem="zfm-jC-Tsh" firstAttribute="centerX" secondItem="t6W-1Y-bFu" secondAttribute="centerX" id="WY1-L9-tB5"/>
+                                    <constraint firstAttribute="width" constant="200" id="XgP-rL-NWS"/>
+                                    <constraint firstItem="zfm-jC-Tsh" firstAttribute="centerY" secondItem="t6W-1Y-bFu" secondAttribute="centerY" id="t72-ii-PSh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kxN-Nf-ygd" firstAttribute="bottom" secondItem="t6W-1Y-bFu" secondAttribute="bottom" constant="20" id="0db-S9-fy8"/>
+                            <constraint firstItem="kxN-Nf-ygd" firstAttribute="trailing" secondItem="pAE-eK-Bdx" secondAttribute="trailing" id="QfA-M1-zM7"/>
+                            <constraint firstItem="kxN-Nf-ygd" firstAttribute="bottom" secondItem="pAE-eK-Bdx" secondAttribute="bottom" id="ULr-s3-mw5"/>
+                            <constraint firstItem="t6W-1Y-bFu" firstAttribute="centerX" secondItem="sBz-hC-aHe" secondAttribute="centerX" id="VQh-4l-XOG"/>
+                            <constraint firstItem="pAE-eK-Bdx" firstAttribute="top" secondItem="sBz-hC-aHe" secondAttribute="top" id="YPe-nU-47E"/>
+                            <constraint firstItem="pAE-eK-Bdx" firstAttribute="leading" secondItem="kxN-Nf-ygd" secondAttribute="leading" id="k21-86-z2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kxN-Nf-ygd"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="pAE-eK-Bdx" id="tUd-YJ-S8k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhv-eH-yVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-30"/>
         </scene>
     </scenes>
     <resources>

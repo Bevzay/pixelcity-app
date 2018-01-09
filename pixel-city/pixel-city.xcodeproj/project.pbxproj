@@ -16,6 +16,7 @@
 		D66B6E631FFB88F50038809E /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B6E621FFB88F50038809E /* DroppablePin.swift */; };
 		D6D03BC52000708900B7DA4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D03BC42000708900B7DA4C /* Constants.swift */; };
 		D6D3F36C1FFE19B000FC2048 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D3F36B1FFE19B000FC2048 /* PhotoCell.swift */; };
+		D6E1E5B920047C9200732463 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1E5B820047C9200732463 /* PopVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D66B6E621FFB88F50038809E /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		D6D03BC42000708900B7DA4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D6D3F36B1FFE19B000FC2048 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D6E1E5B820047C9200732463 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		F516EA5D3C0AAE545473EA8F /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				D610ECD81FF99DA4008103DA /* MapVC.swift */,
+				D6E1E5B820047C9200732463 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E1E5B920047C9200732463 /* PopVC.swift in Sources */,
 				D6D03BC52000708900B7DA4C /* Constants.swift in Sources */,
 				D6D3F36C1FFE19B000FC2048 /* PhotoCell.swift in Sources */,
 				D610ECD91FF99DA4008103DA /* MapVC.swift in Sources */,
