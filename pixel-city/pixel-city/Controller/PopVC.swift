@@ -37,3 +37,5 @@ class PopVC: UIViewController, UIGestureRecognizerDelegate {
     }
 
 }
+
+
